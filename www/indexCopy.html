@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+ 
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations@
+ under the License.
+ -->
+<html>
+	<head>
+		<meta property="og:locale" content="en_US" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+				
+				<link rel="stylesheet" type="text/css" href="css/index.css" />
+				<link rel="stylesheet" href="font.css">
+					
+					<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+					<link rel="stylesheet" href="themes/BetaApp.css" />
+					<link rel="stylesheet" href="themes/jquery.mobile.icons-1.4.5.min.css" />
+					<link rel="stylesheet" href="css/spinner.css" />
+					<link rel="stylesheet" href="css/app-reset.css" />
+					<link rel="stylesheet" href="css/app-ios.css" />
+					<link rel="stylesheet" type="text/css" href="css/zocial.css" />
+					<link rel="stylesheet" href="css/jquery-ui.css">
+						
+						<script src="jquery-1.11.3.min.js"></script>
+						<script src="js/jquery-ui.min.js"></script>
+						<script src="js/jquery.mobile-1.4.5.min.js"></script>
+						
+						<script type="text/javascript" src="js/iscroll4.js"></script>
+						
+						<script type="text/javascript">
+							
+							var myScroll;
+							function loaded() {
+								myScroll = new iScroll('wrapper', {
+									zoom: true,
+									click: true,
+									zoomMin:1,
+									zoomMax:2
+								});
+								setTimeout (function(){
+									myScroll.refresh();
+								}, 700);
+							}
+						
+						document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+						
+						document.addEventListener('DOMContentLoaded', loaded, false);
+						
+						</script>
+						
+						<style type="text/css">
+							* {
+								-webkit-box-sizing: border-box;
+								-moz-box-sizing: border-box;
+								box-sizing: border-box;
+							}
+						
+						html {
+							-ms-touch-action: none;
+						}
+						
+						body,ul,li {
+							padding: 0;
+							margin: 0;
+							border: 0;
+						}
+						
+						body {
+							font-size: 12px;
+							font-family: ubuntu, helvetica, arial;
+							overflow: hidden; /* this is important to prevent the whole page to bounce */
+						}
+						
+						#header {
+							position: absolute;
+							z-index: 2;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 45px;
+							line-height: 45px;
+							padding: 0;
+							color: #fff;
+							font-size: 20px;
+							text-align: center;
+							font-weight: bold;
+						}
+						
+						#footer {
+							position: absolute;
+							z-index: 2;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							height: 45px;
+							line-height: 45px;
+							padding: 0;
+							color: #fff;
+							font-size: 20px;
+							text-align: center;
+							font-weight: bold;
+						}
+						
+						#wrapper {
+							position: absolute;
+							z-index: 1;
+							top: 12%;
+							bottom: 0px;
+							left: 0;
+							width: 100%;
+							background: #ebe6e0;
+							overflow: hidden;
+							
+							background-image:url('img/Logo.png');
+							background-repeat:no-repeat;
+							background-attachment:fixed;
+							/*background-position:center; */
+							background-position: right bottom; /*Positioning*/
+							
+						}
+						
+						
+						
+						#wrapper2 {
+							position: absolute;
+							z-index: 1;
+							top: 2%;
+							bottom: 0px;
+							left: 0;
+							width: 100%;
+							background: #ebe6e0;
+							overflow: hidden;
+							
+							background-image:url('img/Logo.png');
+							background-repeat:no-repeat;
+							background-attachment:fixed;
+							/*background-position:center; */
+							background-position: right bottom; /*Positioning*/
+							
+						}
+						
+						#wrapper3 {
+							position: absolute;
+							z-index: 1;
+							top: 12%;
+							bottom: 0px;
+							left: 0;
+							width: 100%;
+							background: #ebe6e0;
+							overflow: hidden;
+							
+							background-image:url('img/Logo.png');
+							background-repeat:no-repeat;
+							background-attachment:fixed;
+							/*background-position:center; */
+							background-position: right bottom; /*Positioning*/
+							
+						}
+						
+						#wrapper4 {
+							position: absolute;
+							z-index: 1;
+							top: 12%;
+							bottom: 0px;
+							left: 0;
+							width: 100%;
+							background: #ebe6e0;
+							overflow: hidden;
+							
+							background-image:url('img/Logo.png');
+							background-repeat:no-repeat;
+							background-attachment:fixed;
+							/*background-position:center; */
+							background-position: right bottom; /*Positioning*/
+							
+						}
+						#wrapper5 {
+							position: absolute;
+							z-index: 1;
+							top: 12%;
+							bottom: 0px;
+							left: 0;
+							width: 100%;
+							background: #ebe6e0;
+							overflow: hidden;
+							
+							background-image:url('img/Logo.png');
+							background-repeat:no-repeat;
+							background-attachment:fixed;
+							/*background-position:center; */
+							background-position: right bottom; /*Positioning*/
+							
+						}
+						#wrapper6 {
+							position: absolute;
+							z-index: 1;
+							top: 12%;
+							bottom: 0px;
+							left: 0;
+							width: 100%;
+							background: #ebe6e0;
+							overflow: hidden;
+							
+							background-image:url('img/Logo.png');
+							background-repeat:no-repeat;
+							background-attachment:fixed;
+							/*background-position:center; */
+							background-position: right bottom; /*Positioning*/
+							
+						}
+						
+						#wrapper7 {
+							position: absolute;
+							z-index: 1;
+							top: 12%;
+							bottom: 0px;
+							left: 0;
+							width: 100%;
+							background: #ebe6e0;
+							overflow: hidden;
+							
+							background-image:url('img/Logo.png');
+							background-repeat:no-repeat;
+							background-attachment:fixed;
+							/*background-position:center; */
+							background-position: right bottom; /*Positioning*/
+							
+						}
+						
+						#wrapper8 {
+							position: absolute;
+							z-index: 1;
+							top: 12%;
+							bottom: 0px;
+							left: 0;
+							width: 100%;
+							background: #ebe6e0;
+							overflow: hidden;
+							
+							background-image:url('img/Logo.png');
+							background-repeat:no-repeat;
+							background-attachment:fixed;
+							/*background-position:center; */
+							background-position: right bottom; /*Positioning*/
+							
+						}
+
+
+						#scroller {
+							position: absolute;
+							z-index: 1;
+							-webkit-tap-highlight-color: rgba(0,0,0,0);
+							width: 100%;
+							-webkit-transform: translateZ(0);
+							-moz-transform: translateZ(0);
+							-ms-transform: translateZ(0);
+							-o-transform: translateZ(0);
+							transform: translateZ(0);
+							-webkit-touch-callout: none;
+							-webkit-user-select: none;
+							-moz-user-select: none;
+							-ms-user-select: none;
+							user-select: none;
+							-webkit-text-size-adjust: none;
+							-moz-text-size-adjust: none;
+							-ms-text-size-adjust: none;
+							-o-text-size-adjust: none;
+							text-size-adjust: none;
+						}
+						
+						#scroller ul {
+							list-style: none;
+							padding: 0;
+							margin: 0;
+							width: 100%;
+							text-align: left;
+						}
+						
+						#scroller li {
+							padding: 0 10px;
+							height: 40px;
+							line-height: 40px;
+							border-bottom: 1px solid #fff;
+							border-top: 1px solid #fff;
+							background-color: #fff;
+							font-size: 14px;
+						}
+						
+							</style>
+						
+						<style>
+							.ui-icon-taifun:after {
+								background-image: url("img/CartW.png");
+								background-size: 18px 18px;
+								
+							}
+						.ui-icon-userhome:after {
+							background-image: url("img/UserW.png");
+							background-size: 18px 18px;
+							
+						}
+						.ui-icon-pinhome:after {
+							background-image: url("img/Altro.png");
+							background-size: 18px 18px;
+							
+						}
+						.ui-icon-ristohome:after {
+							background-image: url("img/RistoW.png");
+							background-size: 18px 18px;
+							
+						}
+						.ui-icon-homehome:after {
+							background-image: url("img/Best1.png");
+							background-size: 18px 18px;
+							
+						}
+						
+						.ui-mobile, .ui-mobile .ui-page, .ui-mobile [data-role="page"],
+						.ui-mobile [data-role="dialog"], .ui-page, .ui-mobile .ui-page-active {
+							overflow: hidden;
+							-webkit-backface-visibility: hidden;
+						}
+						
+						.div1 {
+							background-color: #9f1e24;
+							height: 52px;
+							border: none;
+							
+							vertical-align: middle;
+						}
+						.div2 {
+							background-color: #ebe6e0;
+						}
+						.div9 {
+							background-color: #000000;
+						}
+						.div3Copy {
+							background-color: #ebe6e0;
+							position: absolute;
+							z-index: 2;
+							top:5px;
+							left:5px;
+							width:97%;
+							height: 52px;
+							padding: 0;
+							color: #000;
+							
+							text-align: center;
+							font-weight: bold;
+							
+						}
+						
+						.div3 {
+							background-color: #ebe6e0;
+							position: absolute;
+							z-index: 2;
+							top:0px;
+							left:0px;
+							width:100%;
+							height: 8%;
+							padding: 0;
+							color: #000;
+							
+							text-align: center;
+							font-weight: bold;
+							
+						}
+						.div33 {
+
+							position: absolute;
+							top:5px;
+							left:5px;
+
+							padding: 0;
+							
+							text-align: center;
+							font-weight: bold;
+							
+						}
+						.div4 {
+							background: rgb(125,126,125); /* Old browsers */
+							background: -moz-linear-gradient(45deg, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+							background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+							background: -webkit-linear-gradient(45deg, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+							background: -o-linear-gradient(45deg, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+							background: -ms-linear-gradient(45deg, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+							background: linear-gradient(45deg, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+						}
+						.div5 {
+							background-color: #000;
+							position: fixed;
+							z-index: 19;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							height: 5%;
+							padding: 0;
+							color: #000;
+							
+							text-align: center;
+							font-weight: bold;
+							
+							opacity: 0.5;
+							filter: alpha(opacity=50);
+							
+						}
+						
+						.div55 {
+							position: fixed;
+							z-index: 20;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							height: 5%;
+							padding: 0;
+							color: #000;
+							
+							text-align: center;
+							font-weight: bold;
+						}
+						
+						.div56{
+							background-color: #2E2E2E;
+							width: 100%;
+							
+							text-decoration: none;
+							text-shadow:0 0 0;
+							
+							width:90%;
+
+
+							opacity: 0.9;
+							filter: alpha(opacity=90);
+							
+						}
+						
+						.galleriaimmagini {
+							position: absolute;
+						}
+						
+						.div6 {
+							background-color: #000;
+						}
+						
+						.div8 {
+							z-index: 0;
+							top:62px;
+
+							width:90%;
+							height: 100%;
+
+							color: #000;
+							font-size: 12px;
+						
+						}
+						
+						.trBorderCell
+						{
+							height: 30px;
+							width: 320px;
+							background: rgba(0,0,0,.6);
+							
+						}
+						
+						.margine
+						{
+							margin:0 auto;
+						}
+						
+						.arrotondamento
+						{
+							border-radius: 8px;
+							-moz-border-radius: 8px; /* firefox */
+							-webkit-border-radius: 8px; /* safari, chrome */
+						}
+						.custom-btn {
+							width: 280px;
+						}
+						
+						.custom-btn2 {
+							width: 280px;
+						}
+						
+						.custom-btn3 {
+							width: 100px;
+						}
+						
+						.big { height: 80px;}
+						.big .ui-btn-inner { padding-top:25px; }
+						
+						table.tablesorter {
+							font-family:arial;
+							background-color: #f0f0f0;
+							margin:10px 0pt 15px;
+							font-size: 8pt;
+							width: 95%;
+							text-align: left;
+							border: 0px solid #FFF;
+							
+							border-radius: 5px;
+							-moz-border-radius: 5px; /* firefox */
+							-webkit-border-radius: 5px; /* safari, chrome */
+							
+						}
+						table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+							background-color: #B40431;
+							border: 1px solid #FFF;
+							font-size: 8pt;
+							padding: 4px;
+							width: 55%;
+							
+							border-radius: 5px;
+							-moz-border-radius: 5px; /* firefox */
+							-webkit-border-radius: 5px; /* safari, chrome */
+							
+						}
+						table.tablesorter thead tr .header {
+							background-image: url(bg.gif);
+							background-repeat: no-repeat;
+							background-position: center right;
+							cursor: pointer;
+						}
+						table.tablesorter tbody td {
+							color: #B40431;
+							padding: 4px;
+							background-color: #FFF;
+							vertical-align: top;
+							
+						}
+						table.tablesorter tbody tr.odd td {
+							background-color:#000000;
+						}
+						table.tablesorter thead tr .headerSortUp {
+							background-image: url(asc.gif);
+						}
+						table.tablesorter thead tr .headerSortDown {
+							background-image: url(desc.gif);
+						}
+						table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+							background-color: #B40431;
+							
+						}
+						
+						.home {
+							background-color: #9d3434;
+							background-image: url(img/minusW.png);
+							background-size: 26px 26px;
+							background-repeat: no-repeat;
+							background-position:center;
+							
+							height:28px;
+							width:28px;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							-webkit-box-shadow: 0px 0px 0.5px 1px #FFF;
+							-moz-box-shadow: 0px 0px 0.5px 1px #FFF;
+							box-shadow: 0px 0px 0.5px 1px #FFF;
+						}
+						
+						.home1 {
+							background-color: #9d3434;
+							background-image: url(img/plusW.png);
+							background-size: 26px 26px;
+							background-repeat: no-repeat;
+							background-position:center;
+							
+							height:28px;
+							width:28px;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							-webkit-box-shadow: 0px 0px 0.5px 1px #FFF;
+							-moz-box-shadow: 0px 0px 0.5px 1px #FFF;
+							box-shadow: 0px 0px 0.5px 1px #FFF;
+						}
+						
+						.home:active {
+							background-color: #000000;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							-webkit-box-shadow: 0px 0px 0.5px 1px #000;
+							-moz-box-shadow: 0px 0px 0.5px 1px #000;
+							box-shadow: 0px 0px 0.5px 1px #000;
+						}
+						
+						.home1:active {
+							background-color:#000000;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							-webkit-box-shadow: 0px 0px 0.5px 1px #000;
+							-moz-box-shadow: 0px 0px 0.5px 1px #000;
+							box-shadow: 0px 0px 0.5px 1px #000;
+						}
+						
+						.circolare {
+							width: 30px;
+							height: 30px;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							-webkit-box-shadow: 0px 0px 0.5px 0.5px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0.5px #000;
+							box-shadow: 0px 0px 0.5px 0.5px #000;
+						}
+						
+						a {text-decoration:none;}
+						
+						.styled-select select {
+							background: transparent;
+							width: 268px;
+							padding: 5px;
+							font-size: 16px;
+							line-height: 1;
+							border: 0;
+							border-radius: 0;
+							height: 34px;
+							-webkit-appearance: none;
+						}
+						
+						.banner {
+							left:110px;
+							bottom:20px;
+							position: fixed;
+							
+							margin-left: auto ;
+							margin-right: auto ;
+							
+						}
+						
+						hr.style-six {
+							border: 0;
+							height: 0;
+							border-top: 1px solid rgba(0, 0, 0, 0.1);
+							border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+						}
+						
+						.mynav .ui-select, .mynav .ui-btn {
+							margin-top: 0;
+							margin-bottom: 0;
+							margin-left: 2px;
+							margin-right: 2px !important;
+						}
+						.conn {
+							font-size: 9pt;
+							color:#FFF;
+							background-color: #FF8000;
+						}
+						
+						.badge1 {
+							position:relative;
+						}
+						.badge1[data-badge]:after {
+							content:attr(data-badge);
+							position:absolute;
+							top:3px;
+							right:-1px;
+							font-size:.7em;
+							background:green;
+							color:white;
+							width:18px;height:18px;
+							text-align:center;
+							line-height:20px;
+							border-radius:50%;
+							box-shadow:0 0 1px #333;
+							border: 1px solid #fff;
+						}
+						.badge2 {
+							
+						}
+						.badge2[data-badge]:after {
+							
+						}
+						.badge3 {
+							position:relative;
+						}
+						.badge3[data-badge]:after {
+							content:attr(data-badge);
+							position:absolute;
+							top:-30px;
+							right:-15px;
+							font-size:.7em;
+							background:green;
+							color:white;
+							width:20px;height:20px;
+							text-align:center;
+							line-height:20px;
+							border-radius:50%;
+							box-shadow:0 0 1px #333;
+							border: 1px solid #fff;
+						}
+						
+						
+						.someClass b {
+							font-weight: normal;
+							text-decoration: none;
+							text-shadow:0 0 0;
+						}
+						
+						.someClass {
+							font-weight: normal;
+							text-decoration: none;
+							text-shadow:0 0 0;
+						}
+						.someClass2 {
+							font-weight: normal;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							font-size: 18px;
+						}
+						
+						.btn {
+							background: #9f1e24;
+							background-image: -webkit-linear-gradient(top, #9f1e24, ##9f1e24);
+							background-image: -moz-linear-gradient(top, #9f1e24, ##9f1e24);
+							background-image: -ms-linear-gradient(top, #9f1e24, ##9f1e24);
+							background-image: -o-linear-gradient(top, #9f1e24, ##9f1e24);
+							background-image: linear-gradient(to bottom, #9f1e24, ##9f1e24);
+							-webkit-border-radius: 21;
+							-moz-border-radius: 21;
+							border-radius: 21px;
+							font-family: Arial;
+							color: #ffffff;
+							font-size: 24px;
+							padding: 10px 20px 10px 20px;
+							text-decoration: none;
+						}
+						
+						.btn:hover {
+							background: #000000;
+							background-image: -webkit-linear-gradient(top, #000000, #9f1e24);
+							background-image: -moz-linear-gradient(top, #000000, #9f1e24);
+							background-image: -ms-linear-gradient(top, #000000, #9f1e24);
+							background-image: -o-linear-gradient(top, #000000, #9f1e24);
+							background-image: linear-gradient(to bottom, #000000, #9f1e24);
+							text-decoration: none;
+						}
+						
+						.inAppBrowserWrap {
+							background-color: rgba(0,0,0,0.75);
+							color: rgba(235,235,235,1.0);
+							width:320px;
+						}
+						.inAppBrowserWrap menu {
+							overflow: auto;
+							list-style-type: none;
+							padding-left: 0;
+						}
+						.inAppBrowserWrap menu li {
+							font-size: 25px;
+							height: 25px;
+							float: left;
+							margin: 0 10px;
+							padding: 3px 10px;
+							text-decoration: none;
+							color: #ccc;
+							display: block;
+							background: rgba(30,30,30,0.50);
+						}
+						.inAppBrowserWrap menu li.disabled {
+							color: #777;
+						}
+						
+						#pluto {
+							/* Cosmettics only */
+							position:absolute;
+							background: #000000;
+							width: 100%;
+							height:100%;
+							
+							border: 1px solid black;
+							padding: 20px;
+							text-align: center;
+							/* The real deal */
+							margin: 1px auto;
+							top:0;
+							z-index: 100;
+							
+							
+							opacity: 0.6;
+							filter: alpha(opacity=60);
+						}
+						
+						#pippo {
+							/* Cosmettics only  */
+							
+							background: #000000;
+							border-radius: 10px;
+							
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							margin-top: -150px;
+							margin-left: -150px;
+							width: 300px;
+							height: 260px;
+							
+							z-index: 101;
+							
+						}
+						
+						#pluto5 {
+							/* Cosmettics only */
+							position:absolute;
+							background: #000000;
+							width: 100%;
+							height:100%;
+							
+							border: 1px solid black;
+							padding: 20px;
+							text-align: center;
+							/* The real deal */
+							margin: 1px auto;
+							top:0;
+							z-index: 110;
+							
+							
+							opacity: 0.6;
+							filter: alpha(opacity=60);
+						}
+						
+						#pippo5 {
+							/* Cosmettics only  */
+							
+							background: #000000;
+							border-radius: 10px;
+							
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							margin-top: -150px;
+							margin-left: -150px;
+							width: 300px;
+							height: 260px;
+							
+							z-index: 111;
+							
+						}
+						
+						#pluto1 {
+							background: #000000;
+							
+							opacity: 0.6;
+							filter: alpha(opacity=60);
+						}
+						
+						.pulsante11 {
+							background-image: url(img/button3.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:center;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+							
+							z-index: 1;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+
+						}
+						
+						.pulsante1 {
+							background-image: url(img/button3.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:center;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+							
+							z-index: 21;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+						}
+						
+						.pulsante1:active {
+							background-image: url(img/button3a.png);
+							
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							z-index: 21;
+
+						}
+						.pulsante2 {
+							background-image: url(img/video.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:center;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+							
+							z-index: 21;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							/*-webkit-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 -moz-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 box-shadow: 0px 0px 0.5px 1.5px #000;*/
+						}
+						
+						.pulsante2:active {
+							background-image: url(img/videoa.png);
+							
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							z-index: 21;
+							-webkit-box-shadow: 0px 0px 0.5px 0px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0px #000;
+							box-shadow: 0px 0px 0.5px 0px #000;
+						}
+						.pulsante3 {
+							background-image: url(img/button5.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:center;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+							
+							z-index: 21;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							/*-webkit-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 -moz-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 box-shadow: 0px 0px 0.5px 1.5px #000;*/
+						}
+						
+						.pulsante3:active {
+							background-image: url(img/button5a.png);
+							
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							z-index: 21;
+							-webkit-box-shadow: 0px 0px 0.5px 0px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0px #000;
+							box-shadow: 0px 0px 0.5px 0px #000;
+						}
+						.pulsante3new {
+							background-image: url(img/button5_new.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:center;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+							
+							z-index: 21;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							/*-webkit-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 -moz-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 box-shadow: 0px 0px 0.5px 1.5px #000;*/
+						}
+						
+						.pulsante3new:active {
+							background-image: url(img/button5a.png);
+							
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							z-index: 21;
+							-webkit-box-shadow: 0px 0px 0.5px 0px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0px #000;
+							box-shadow: 0px 0px 0.5px 0px #000;
+						}
+						.pulsanteback {
+							background-image: url(img/back.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:center;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+							
+							z-index: 21;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							/*-webkit-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 -moz-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 box-shadow: 0px 0px 0.5px 1.5px #000;*/
+						}
+						
+						.pulsanteback:active {
+							background-image: url(img/backa.png);
+							
+							border-radius:5px;
+							-moz-border-radius:5px;
+							-webkit-border-radius:5px;
+							-o-border-radius: 5px;
+							
+							z-index: 21;
+							-webkit-box-shadow: 0px 0px 0.5px 0px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0px #000;
+							box-shadow: 0px 0px 0.5px 0px #000;
+						}
+						.pulsantereply {
+							background-image: url(img/buttonSMS.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:center;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+							
+							z-index: 21;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							/*-webkit-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 -moz-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 box-shadow: 0px 0px 0.5px 1.5px #000;*/
+						}
+						
+						.pulsantereply:active {
+							background-image: url(img/backa.png);
+							
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							z-index: 21;
+							-webkit-box-shadow: 0px 0px 0.5px 0px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0px #000;
+							box-shadow: 0px 0px 0.5px 0px #000;
+						}
+
+.pulsanterefresh {
+	background-image: url(img/refresh.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position:center;
+	width: 100%;
+	height: 0;
+	padding-top: 66.64%; /* (img-height / img-width * width) */
+	/* (853 / 1280 * 100) */
+	
+	z-index: 21;
+	border-radius:999em;
+	-moz-border-radius:999em;
+	-webkit-border-radius:999em;
+	-o-border-radius: 999em;
+	
+	/*-webkit-box-shadow: 0px 0px 0.5px 1.5px #000;
+	 -moz-box-shadow: 0px 0px 0.5px 1.5px #000;
+	 box-shadow: 0px 0px 0.5px 1.5px #000;*/
+}
+						
+						.pulsanterefresh:active {
+							background-image: url(img/refresha.png);
+							
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							z-index: 21;
+							-webkit-box-shadow: 0px 0px 0.5px 0px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0px #000;
+							box-shadow: 0px 0px 0.5px 0px #000;
+						}
+
+.pulsante4 {
+	background-image: url(img/button4.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position:center;
+	width: 100%;
+	height: 0;
+	padding-top: 66.64%; /* (img-height / img-width * width) */
+	/* (853 / 1280 * 100) */
+	
+	z-index: 21;
+	border-radius:999em;
+	-moz-border-radius:999em;
+	-webkit-border-radius:999em;
+	-o-border-radius: 999em;
+	
+	/*-webkit-box-shadow: 0px 0px 0.5px 1.5px #000;
+	 -moz-box-shadow: 0px 0px 0.5px 1.5px #000;
+	 box-shadow: 0px 0px 0.5px 1.5px #000;*/
+}
+						
+						.pulsante4:active {
+							background-image: url(img/button4a.png);
+							
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							z-index: 21;
+							-webkit-box-shadow: 0px 0px 0.5px 0px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0px #000;
+							box-shadow: 0px 0px 0.5px 0px #000;
+						}
+						
+						.pulsante5 {
+							background-image: url(img/button1.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:center;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+							
+							z-index: 21;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							/*-webkit-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 -moz-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 box-shadow: 0px 0px 0.5px 1.5px #000;*/
+						}
+						
+						.pulsante5:active {
+							background-image: url(img/button1a.png);
+							
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							z-index: 21;
+							-webkit-box-shadow: 0px 0px 0.5px 0px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0px #000;
+							box-shadow: 0px 0px 0.5px 0px #000;
+						}
+						
+						.foto {
+							background-image: url(img/Immagine.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:left;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+
+						}
+
+						
+						.bannerino {
+							
+							border-radius:5px;
+							-moz-border-radius:5px;
+							-webkit-border-radius:5px;
+							-o-border-radius: 5px;
+
+						}
+						
+
+							</style>
+						
+						<style type="text/css">
+							img { -webkit-transform:translate3d(0,0,0) }
+							div { -webkit-transform:translate3d(0,0,0) }
+							
+							.visione {
+								font-size:12px;
+								text-decoration: none;
+								text-shadow:0 0 0;
+								color: #000;
+							}
+						
+						.visioneIPAD {
+							font-size:24px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #000;
+						}
+						
+						.visioneDROID {
+							font-size:14px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #000;
+						}
+						
+						.visione2 {
+							font-size:12px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #042e72;
+						}
+						
+						.visione2IPAD {
+							font-size:24px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #042e72;
+						}
+						
+						.visione2DROID {
+							font-size:14px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #042e72;
+						}
+						
+						.visione3 {
+							font-size:15px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #042e72;
+						}
+						.visione3IPAD {
+							font-size:30px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #042e72;
+						}
+						
+						.visione3DROID {
+							font-size:18px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #042e72;
+						}
+						
+						.visione4 {
+							font-size:15px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: red;
+						}
+						.visione4IPAD {
+							font-size:30px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: red;
+						}
+						
+						.visione4DROID {
+							font-size:18px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: red;
+						}
+
+						</style>
+	</head>
+	<body>
+		
+		<div id="page" data-role="page" class="div2" >
+			
+			<table width="100%" border="0" valign="center" align="center" class="div3">
+				<tr>
+					<td width="100%" align="center">
+						<img src="img/logoermes.png" width="100%">
+					</td>
+				</tr>
+				
+			</table>
+			
+		<div class="spinner" id="spinner"></div>
+		
+		<div id="wrapper">
+			<div id="scroller">
+				<table id="spazioipad" style="display: none;" height="20px"><tr><td></td></tr></table>
+				
+				<table width="98%" border="0" valign="center" align="center" >
+					<tr>
+						<td width="95%">
+							<div id="testoTitolo" class="visione2"><b>Soluzioni e Tecnologie per il vostro business</b></div>
+						</td>
+						<td width="5%">
+								<a href="javascript:apri()"><img id="pallina" src="img/info.png" width="26"></a>
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" align="justify" colspan="2">
+							<div id="testo" class="visione">Ermes Italia produce tecnologie innovative e progetta soluzioni d’avanguardia in ambito ICT e Business Intelligence.<br> Struttura aziendale orientata al Cliente pronta a raccogliere le nuove sfide del mercato.<br>Ermes Italia garantisce competenza e creatività nel rispetto della concretezza e fattibilità delle soluzioni tecnologiche. Professionalità, Versatilità e Capacità di Team  Working consentono ad Ermes Italia di competere nelle aree di:&nbsp;<a id="vedi" href="#" ><font color="#042e72">continua&nbsp;[...]</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="2" align="center">
+							
+						</td>
+					</tr>
+
+					<tr>
+						<td width="100%" colspan="2" align="center">
+							<div id="testoCentrale" class="visione3"><b>Computing, Consulting &amp; Mobile</b></div>
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="2" align="center">
+							
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="2" align="center">
+							
+						</td>
+					</tr>
+
+					</table>
+				<table id="phone" align="center" border="0" width="97%" height="90%">
+					<tr>
+						<td align="right" width="40%" valign="top">
+							<img id="copertina" src="img/Immagine.png" height="56%"></div>
+						</td>
+						<td align="center" width="60%" valign="center">
+				<table align="center">
+					<tr>
+						<td align="center">
+							<div id="Nome" class="visione3"><b>Domenico Putignano</b></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<div id="titolo" class="visione4"><b>CEO &amp; Founder</b></div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			</tr>
+			
+			</table>
+			
+			</div>
+			
+		</div>
+		
+		<div id="pluto" align="center" valign="top" style="display: none;" >
+			
+		</div>
+		
+		<div id="pippo" style="display: none;">
+			<table border="0" align="center" width="100%" height="260px" class="visione">
+				<tr height="32px">
+					<td width="100%" align="right">
+						<a href="javascript:chiudi()"><img src="img/exit.png" width="32px"></a>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%" align="center" valign="center">
+						<img src="img/bannerino.jpg" width="160px" class="bannerino">
+							</td>
+				</tr>
+				<tr>
+					<td width="100%" align="center" valign="center">
+						<font size="3" color="#fff"><b>Powerd by Ermes Italia s.rl.</b></font>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%" align="center" valign="center">
+						
+					</td>
+				</tr>
+				<tr>
+					<td width="100%" align="center" valign="center">
+						<font size="2" color="#fff">Questa App è stata sviluppata dalla piattaforma IBA. ogni App viene personalizzata in funzione delle caratteristiche che il cliente richiede.</font>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%" align="center" valign="center">
+					</td>
+				</tr>
+				<tr>
+					<td width="100%" align="center" valign="center">
+						<a href="javascript:aprimail()"><font color="#fff" size="4"><b>info@ermesitalia.it</b></font></a>
+					</td>
+					<tr>
+						<td width="100%" align="center" valign="center">
+							<a href="tel:+393357540725" class="visione"><font color="#fff" size="4"><b>+39 06 41531215</b></font></a>
+						</td>
+					</tr>
+				</tr>
+			</table>
+		</div>
+		
+
+		<table id="zoccolo" width="100%" border="0" align="center" valign="center" class="div5" >
+			<tr>
+				<td algn="center" width="20%" align="center">
+					<div class="pulsante11"></div>
+				</td>
+				<td algn="center" width="20%" align="center">
+					
+				</td>
+				<td algn="center" width="20%" align="center">
+					
+				</td>
+				<td algn="center" width="20%" align="center">
+					
+				</td>
+				<td algn="center" width="20%" align="center">
+					
+				</td>
+			</tr>
+		</table>
+		
+		<table width="100%" border="0" align="center" valign="center" class="div55" >
+			<tr>
+				<td algn="center" width="20%" align="center">
+					<a id="primo" href="#"><div class="pulsante1"></div></a>
+				</td>
+				<td algn="center" width="20%" align="center">
+					<a id="secondo" href="#"><div class="pulsante2"></div></a>
+					<!--<a href="#page3" onclick="carica2()" data-transition="slide"><img src="img/video.png" width="60">-->
+				</td>
+				<td algn="center" width="20%" align="center">
+					<a id="terzo" href="#"><div id="pushbutton" width='100%' class="pulsante3"></div></a>
+				</td>
+				<td algn="center" width="20%" align="center">
+					<a id="sesto" href="#"><div id="contatti" width='100%' class="pulsante5"></div></a>
+				</td>
+				<td algn="center" width="20%" align="center">
+					<a id="quarto" href="#"><div id="biglietto" width='100%' class="pulsante4"></div></a>
+				</td>
+			</tr>
+		</table>
+		
+		</div>
+		
+		<!--<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" >Close</a>-->
+		
+		<div id="page2" data-role="page" class="div2" >
+			
+			<div class="spinner" id="spinner"></div>
+
+			<div id="wrapper2">
+				<div id="scroller">
+					
+					<table id="galleriaimmagini" width="98%" border="0" valign="center" align="center" >
+						
+						<div id="galleriaimg">
+							
+						</div>
+						
+					</table>
+					
+					
+				</div>
+				
+			</div>
+			
+			<table width="100%" border="0" align="center" valign="center" class="div5" data-position="fixed" data-tap-toggle="false">
+				<tr>
+					<td algn="center" width="20%" align="center">
+						<div class="pulsante11"></div>
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+				</tr>
+			</table>
+			
+			<table width="100%" border="0" align="center" valign="center" class="div55" data-position="fixed" data-tap-toggle="false">
+				<tr>
+					<td algn="center" width="20%">
+						<a id="primos" href="#"><div width='50px' class="pulsanteback"></div></a>
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+				</tr>
+			</table>
+			
+		</div><!-- /page2 -->
+		
+		<div id="page3" data-role="page" class="div2" >
+			
+			<table width="100%" border="0" valign="center" align="center" class="div3">
+				<tr>
+					<td width="100%" align="center">
+						<img src="img/logoermes.png" width="100%">
+							</td>
+				</tr>
+				
+			</table>
+			
+			
+			<div id="wrapper3">
+				<div id="scroller">
+					
+					<table width="100%" height="24px" border="0" valign="center" align="center" >
+						<tr>
+							<td width="100%" align="center">
+								
+							</td>
+						</tr>
+					</table>
+					
+					
+					<table width="98%" height="100%" border="0" valign="center" align="center" >
+						<tr>
+							<td width="100%" align="center">
+								<font color="#042e72" size="3"><b>Presentazione Aziendale</b></font></font>
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center">
+								<a href="javascript:aprivideo1()"><img src="http://www.pokeranswer.it/img/video1.png" width="240px" data-rel="external"></a>
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center">
+								&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center">
+								&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center">
+								<font color="#042e72" size="3"><b>BNI - Referall Marketing</b></font></font>
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center">
+								<a href="javascript:aprivideo2()"><img src="http://www.pokeranswer.it/img/video2.png" width="240px" data-rel="external"></a>
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center">
+								
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center">
+								
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center">
+								
+							</td>
+						</tr>
+						
+					</table>
+					
+				</div>
+				
+			</div>
+			<br><br>
+			
+			<table width="100%" border="0" align="center" valign="center" class="div5">
+				<tr>
+					<td algn="center" width="20%" align="center">
+						<div class="pulsante11"></div>
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+				</tr>
+			</table>
+			
+			<table width="100%" border="0" align="center" valign="center" class="div55">
+				<tr>
+					<td algn="center" width="20%">
+						<a id="secondos" href="#"><div width='50px' class="pulsanteback"></div></a>
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+		
+		
+		<div id="page4" data-role="page" class="div2" >
+			
+			<table width="100%" border="0" valign="center" align="center" class="div3">
+				<tr>
+					<td width="100%" align="center">
+						<img src="img/logoermes.png" width="100%">
+							</td>
+				</tr>
+				
+			</table>
+			
+			<div class="spinner" id="spinner"></div>
+			<div id="wrapper4">
+				<div id="scroller">
+					
+					<table width="100%" height="24px" border="0" valign="center" align="center" >
+						<tr>
+							<td width="100%" align="center">
+								
+							</td>
+						</tr>
+					</table>
+					
+					
+					<table width="98%" height="100%" border="1" valign="center" align="center" class="div8">
+						<div id="contenuto"></div>
+
+					</table>
+					
+				</div>
+				
+			</div>
+			
+			
+			<table width="100%" border="0" align="center" valign="center" class="div5">
+				<tr>
+					<td algn="center" width="20%" align="center">
+						<div class="pulsante11"></div>
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+				</tr>
+			</table>
+			
+			<table width="100%" border="0" align="center" valign="center" class="div55">
+				<tr>
+					<td algn="center" width="20%">
+						<a id="terzos" href="#"><div width='50px' class="pulsanteback"></div></a>
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						<a id="pulrefresh" href="#"><div width='50px' class="pulsanterefresh"></div></a>
+					</td>
+					<td algn="left" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+		
+		<div id="page5" data-role="page" class="div2" >
+			
+			<table width="100%" border="0" valign="center" align="center" class="div3">
+				<tr>
+					<td width="100%" align="center">
+						<img src="img/logoermes.png" width="100%">
+							</td>
+				</tr>
+				
+			</table>
+			
+			<div id="pluto5" align="center" valign="top" style="display: none;" >
+				
+			</div>
+			
+			<div id="pippo5" style="display: none;">
+				<table border="0" align="center" width="100%" height="260px">
+					<tr height="32px">
+						<td width="100%" align="left">
+							<a href="javascript:chiudi5()"><img src="img/exit.png" width="32px"></a>
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" align="center" valign="center">
+							<font color="#fff" size="3">Contatta tramite:</font>
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" align="center" valign="center">
+							<a href="javascript:mandasms()"><img src="img/sms.png" width="100px"></a>&nbsp;&nbsp;<a href="javascript:aprimail()"><img src="img/email.png" width="100px"></a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			
+			<div class="spinner" id="spinner"></div>
+			<div id="wrapper5">
+				<div id="scroller">
+					
+					<table width="100%" height="24px" border="0" valign="center" align="center" >
+						<tr>
+							<td width="100%" align="center">
+								
+							</td>
+						</tr>
+					</table>
+					
+					<div id="contenuto2"></div>
+				</div>
+				
+			</div>
+			
+			
+			<table width="100%" border="0" align="center" valign="center" class="div5">
+				<tr>
+					<td algn="center" width="20%" align="center">
+						<div class="pulsante11"></div>
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+				</tr>
+			</table>
+			
+			<table width="100%" border="0" align="center" valign="center" class="div55">
+				<tr>
+					<td algn="center" width="20%">
+						<a id="quartos" href="#"><div width='50px' class="pulsanteback"></div></a>
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						<a id="pulsms" href="#"><div width='50px' class="pulsantereply"></div></a>
+					</td>
+					<td algn="left" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+		
+		<div id="page6" data-role="page" class="div2" >
+			
+			<table width="100%" border="0" valign="center" align="center" class="div3">
+				<tr>
+					<td width="100%" align="center">
+						<img src="img/logoermes.png" width="100%">
+							</td>
+				</tr>
+				
+			</table>
+			
+			<div class="spinner" id="spinner"></div>
+			<div id="wrapper6">
+				<div id="scroller">
+					
+					
+					<table width="98%" height="100%" border="0" valign="center" align="center" >
+						<tr>
+							<td width="100%" colspan="2">&nbsp;
+								
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center" colspan="2">
+								<font color="#042e72" size="4"><b>Send My App</b></font
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" colspan="2">&nbsp;
+								
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center" colspan="2">
+								<font color="#000" size="2">scegli come inviare la tua</font>
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" align="center" colspan="2">
+								<font color="#042e72" size="5"><b>Digital Business Card</b></font>
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" colspan="2">&nbsp;
+								<br>
+							</td>
+						</tr>
+						<tr>
+							<td width="50%" align="center">
+								<a href="javascript:mandasms()"><img src="img/sms.png" width="66%"></a>
+							</td>
+							<td width="50%" align="center">
+								<a href="javascript:aprimail()"><img src="img/email.png" width="66%"></a>
+							</td>
+						</tr>
+						<tr>
+							<td width="100%" colspan="2">&nbsp;
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" width="100%" align="center">&nbsp;
+								<img src="img/d_putignano.jpg" width="33%">
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+				
+			</div>
+			
+			
+			<table width="100%" border="0" align="center" valign="center" class="div5">
+				<tr>
+					<td algn="center" width="20%" align="center">
+						<div class="pulsante11"></div>
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+					<td algn="center" width="20%" align="center">
+						
+					</td>
+				</tr>
+			</table>
+			
+			<table width="100%" border="0" align="center" valign="center" class="div55">
+				<tr>
+					<td algn="center" width="20%">
+						<a id="quintos" href="#"><div width='50px' class="pulsanteback"></div></a>
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+
+		<div id="page7" data-role="page" class="div2" >
+			
+			<table width="100%" border="0" valign="center" align="center" class="div3">
+				<tr>
+					<td width="100%" align="center">
+						<img src="img/logoermes.png" width="100%">
+							</td>
+				</tr>
+				
+			</table>
+			
+			<div class="spinner" id="spinner"></div>
+			<div id="wrapper7">
+				<div id="scroller">
+					
+					<table width="90%" height="100%" border="0" valign="center" align="center" >
+						<tr>
+							<td width="100%">
+								<div id="testoTitolo3" class="visione2"><b>Soluzioni e Tecnologie per il vostro business</b><br><br></div>
+							</td>
+						</tr>
+						<tr>
+							<td width="90%" align="justify" colspan="2">
+								<div id="testo3" class="visione">L’ultimo progetto di sviluppo di Ermes Italia riguarda il settore Mobile, strumento strategico per comunicare non solo tramite la voce ma soprattutto attraverso App-licazioni che ci permettono  di essere i primi a Promuovere, Pubblicare, Diffondere, Comunicare la Vostra Immagine il vostro Brand la vostra offerta di prodotti/servizi.<br><br>
+										Tale progetto si chiama IBA – Interactive Business App – un sistema innovativo di personalizzazione del profilo di qualsiasi attività, professione o azienda.<br><br> E’ indicato per piccole, medie e grandi imprese, per artigiani e professionisti, attività commerciali, settore sportivo e ricreativo, ristorazione e alberghi è per tutti coloro che vogliono e cercano un modo nuovo di comunicare rispetto ad altri, per uscire dal mucchio ed essere presenti sul display più consultato al mondo, quello dello Smartphone e Tablet.<br><br>
+										
+										Ermes Italia si occupa anche di Business Intelligence a supporto della Governance Integrata.<br><br> L’offerta si compone di una serie di attività di Consulenza Direzionale in ambito Process & Management ICT, Planning & Control, Audit & Compliance. Le soluzioni che proponiamo vanno dalla progettazione e realizzazione di modelli di sviluppo aziendali alle strategie di semplificazione per il miglioramento delle performance in ottica di protezione delle risorse, risparmio e riduzione dei costi, senza penalizzare e compromettere la qualità dell’ambiente,  della sicurezza sul lavoro e dei risultati attesi.&nbsp;<br><br></div>
+				
+				</td>
+				</tr>
+				<tr>
+					<td width="100%" colspan="2" align="center">
+						<font ><font color="blue">&nbsp;</font></font>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%" colspan="2" align="center">
+						<font ><font color="blue">&nbsp;</font></font>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%" colspan="2" align="center">
+						<font ><font color="blue">&nbsp;</font></font>
+					</td>
+				</tr>
+			
+				</table>
+
+
+				</div>
+			
+			</div>
+		
+		
+		<table width="100%" border="0" align="center" valign="center" class="div5">
+			<tr>
+				<td algn="center" width="20%" align="center">
+					<div class="pulsante11"></div>
+				</td>
+				<td algn="center" width="20%" align="center">
+					
+				</td>
+				<td algn="center" width="20%" align="center">
+					
+				</td>
+				<td algn="center" width="20%" align="center">
+					
+				</td>
+				<td algn="center" width="20%" align="center">
+					
+				</td>
+			</tr>
+		</table>
+		
+			<table width="100%" border="0" align="center" valign="center" class="div55">
+				<tr>
+					<td algn="center" width="20%">
+						<a id="quintos" href="#"><div width='50px' class="pulsanteback"></div></a>
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+					<td algn="center" width="20%">
+						
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+
+<div id="page8" data-role="page" class="div2" >
+	
+	<table width="100%" border="0" valign="center" align="center" class="div3">
+		<tr>
+			<td width="100%" align="center">
+				<img src="img/logoermes.png" width="100%">
+					</td>
+		</tr>
+		
+	</table>
+	
+	<div class="spinner" id="spinner"></div>
+	<div id="wrapper8">
+		<div id="scroller">
+			
+			<table width="100%" height="24px" border="0" valign="center" align="center" >
+				<tr>
+					<td width="100%" align="center">
+						
+					</td>
+				</tr>
+			</table>
+			
+			<table width="100%" height="10%" border="0" valign="center" align="center" >
+			 <tr>
+			 <td width="100%" align="center">
+			 
+			 </td>
+			 </tr>
+			 </table>
+			 
+			 <table id="ciccio" height="100%" border="0" valign="center" align="center" class="div56">
+				 <tr>
+					 <td width="100%" colspan="2">&nbsp;
+						 
+					 </td>
+				 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="center">&nbsp;
+			 <font color="#FFF" size="3"><b>My Social Network</b></font>
+			 </td>
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 </tr>
+			 
+			 <tr>
+			 <td width="100%" colspan="2" align="center">
+			 <a href="javascript:aprifb()"><img src="img/social1.png" width="25%"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:apritw()"><img src="img/social4.png" width="25%"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:aprili()"><img src="img/social3.png" width="25%"></a>
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 
+			 </tr>
+			 </table>
+			 <br><br>
+			 
+			 <br>
+			 <table id="contatto" width="90%" height="100%" border="0" valign="center" align="center">
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <img src="img/Dindirizzo.png" height="25%"><font color="#7e7e7e" size="2"><b>Address</b></font>
+			 </td>
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <a href="javascript:aprimappa()" class="visione"><font color="#042e72" size="3"><b>Via Zoe Fontana, 220 Roma</b></font></a>
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <a href="javascript:aprimappa()" class="visione"><img src="img/Piantina.png" width="300px"></a>
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <img src="img/Dtel.png" height="25%"><font color="#7e7e7e" size="2"><b>Phone</b></font>
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <a href="tel:+39064153215" class="visione"><font color="#042e72" size="3">+39 06 41531215</font></a>
+			 
+			 </td>
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <img src="img/Dcell.png" height="25%"><font color="#7e7e7e" size="2"><b>Mobile</b></font>
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <a href="tel:+393357540725" class="visione"><font color="#042e72" size="3">+39 335 7540725</font></a>
+			 </td>
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <img src="img/Demail.png" height="25%"><font color="#7e7e7e" size="2"><b>e-mail</b></font>
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <a href="javascript:aprimail()"><font color="#042e72" size="3">d.putignano@ermesitalia.it</font></a>
+			 </td>
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <img src="img/Dinternet1.png" height="25%"><font color="#7e7e7e" size="2"><b>Web</b></font>
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2" align="left">
+			 <font color="#042e72" size="3"><b>www.ermesitalia.it</b></font>
+			 </td>
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 
+			 </tr>
+			 
+			 
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 
+			 </tr>
+			 <tr>
+			 <td width="100%" colspan="2">&nbsp;
+			 
+			 </td>
+			 
+			 </tr>
+			</table>
+
+		</div>
+		
+	</div>
+	
+	
+	<table width="100%" border="0" align="center" valign="center" class="div5">
+		<tr>
+			<td algn="center" width="20%" align="center">
+				<div class="pulsante11"></div>
+			</td>
+			<td algn="center" width="20%" align="center">
+				
+			</td>
+			<td algn="center" width="20%" align="center">
+				
+			</td>
+			<td algn="center" width="20%" align="center">
+				
+			</td>
+			<td algn="center" width="20%" align="center">
+				
+			</td>
+		</tr>
+	</table>
+	
+	<table width="100%" border="0" align="center" valign="center" class="div55">
+		<tr>
+			<td algn="center" width="20%">
+				<a id="ottavos" href="#"><div width='50px' class="pulsanteback"></div></a>
+			</td>
+			<td algn="center" width="20%">
+				
+			</td>
+			<td algn="center" width="20%">
+				
+			</td>
+			<td algn="center" width="20%">
+				
+			</td>
+			<td algn="center" width="20%">
+				
+			</td>
+		</tr>
+	</table>
+	
+</div>
+
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		
+		<script type="text/javascript">
+			app.initialize();
+			</script>
+
+	</body>
+</html>
