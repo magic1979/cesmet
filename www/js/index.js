@@ -33,8 +33,6 @@ var app = {
 		
 		var isMobileScreenWidth = (screen.width / window.devicePixelRatio)
 			
-		//alert("RATIO:" + window.devicePixelRatio);
-		
 		//$(window).height()
 		
 		//IPAD CHANGE
@@ -418,6 +416,8 @@ function carica() {
 					setTimeout (function(){
 						
 						myScroll2.refresh();
+						
+						CambiaLingua()
 								
 					}, 1000);
 					
