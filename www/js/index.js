@@ -41,7 +41,9 @@ var app = {
 
 				$("#copertina").attr("height", "60%");
 				$("#testoTitolo").attr("class", "visione2aDROID");
+				$("#testoTitolo3").attr("class", "visione2aDROID");
 				$("#testo").attr("class", "visioneDROID");
+				$("#testo3").attr("class", "visioneDROID");
 				$("#testoCentrale").attr("class", "visione3DROID");
 				$("#Nome").attr("class", "visione3aDROID");
 				$("#titolo").attr("class", "visione4DROID");
@@ -58,7 +60,9 @@ var app = {
 			    $("#spaziodroid8").show();
 
                 $("#textTitle").attr("class", "visione2aDROID");
+				$("#textTitle3").attr("class", "visione2aDROID");
 			    $("#text").attr("class", "visioneDROID");
+				$("#text3").attr("class", "visioneDROID");
 			    $("#title").attr("class", "visione4DROID");
 			    $("#textCentral").attr("class", "visione3DROID");
 			    $("#titlev1").attr("class", "visione3DROID");
@@ -79,7 +83,7 @@ var app = {
 			    $("#emailV").attr("class", "visione2DROID");
 			    $("#webtext").attr("class", "visione2DROID");
 			    $("#webV").attr("class", "visione2DROID");
-				$("#webV").attr("class", "visione2DROID");
+				$("#webV2").attr("class", "visione2DROID");
 				
 				initscroll()
 		}
@@ -741,7 +745,6 @@ function provino2(id) {
 		   dataType:"json"});
 }
 
-
 function checkpush() {
 	
 	setTimeout (function(){
@@ -981,7 +984,6 @@ if(localStorage.getItem("Lingua")==2){
 	}
 
 }
-
 
 
 
