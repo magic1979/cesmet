@@ -1,4 +1,3 @@
-
 var app = {
     // Application Constructor
     initialize: function() {
@@ -263,7 +262,6 @@ var app = {
 			tabella = tabella + "</table>";
 			
 			$('#noconn').html(tabella);
-
 			$(".spinner").hide();
 			
 			$("#footer").show();*/
@@ -312,7 +310,7 @@ function CambiaLingua(){
 			$("#img2").html("Met Travelers");
 			$("#img3").html("Met TH Card");
 			$("#img4").html("Met Giubileo");
-			$("#img5").html("Travel health card – Students in Italy and aboard");
+			$("#img5").html("Travel health card Â– Students in Italy and aboard");
 			$("#img6").html("MET provides health care assistance to companies D.lgs n.81/ 2008 ");
 			$("#img7").html("met online and health care assistance by email");
 			$("#img8").html("30 years of health care support for travellers");
@@ -399,22 +397,6 @@ function alertDismissed() {
 
 function initscroll() {
 
-    if (localStorage.getItem("Token").length < 5 || localStorage.getItem("Token") === null || typeof(localStorage.getItem("Token")) == 'undefined' || localStorage.getItem("Token")=="null") {
-		
-	setTimeout (function(){
-				
-			PushbotsPlugin.getToken(function(token){
-										
-					localStorage.setItem("Token", token);
-										
-					regToken()
-										
-			});
-				
-	}, 500);
-		
-	}
-	
 myScroll = new iScroll('wrapper', {
 				zoom: true,
 				click: true,
@@ -815,12 +797,6 @@ function regToken() {
 	var ciccio;
 	var conta = 1;
 
-    if (localStorage.getItem("Token").length < 5 || localStorage.getItem("Token") === null || typeof(localStorage.getItem("Token")) == 'undefined' || localStorage.getItem("Token")=="null") {
-		
-		return;
-	}
-	else{
-	
 	$(".spinner").show();
 	$.ajax({
 		   type:"GET",
@@ -851,9 +827,7 @@ function regToken() {
 		   
 		   },
 		   dataType:"json"});
-
-    }
-	   
+ 	   
 }
 
 function apri(){
@@ -1055,6 +1029,4 @@ function aprivideo2 () {
 	});
 
 }
-
-
 
