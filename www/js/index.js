@@ -279,6 +279,7 @@ function Lingua(id){
 		localStorage.setItem("Lingua", 2);
 	}
 	
+	//chiamo la funzione
 	CambiaLingua()
 }
 
