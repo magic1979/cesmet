@@ -797,6 +797,7 @@ function regToken() {
 	var ciccio;
 	var conta = 1;
 
+	
 	$(".spinner").show();
 	$.ajax({
 		   type:"GET",
@@ -827,7 +828,8 @@ function regToken() {
 		   
 		   },
 		   dataType:"json"});
- 	   
+
+	   
 }
 
 function apri(){
