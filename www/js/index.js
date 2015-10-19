@@ -46,6 +46,10 @@ var app = {
 				$("#testoCentrale").attr("class", "visione3DROID");
 				$("#Nome").attr("class", "visione3aDROID");
 				$("#titolo").attr("class", "visione4DROID");
+                $("#titolov1").attr("class", "visione3DROID");
+			    $("#titolov2").attr("class", "visione3DROID");
+                $("#continua").attr("class", "visioneDROID");
+                $("#iper").attr("class", "visioneiper");
 				$("#spaziodroid").show();
                 $("#spaziodroid3").show();
 			    $("#spaziodroid4").show();
@@ -53,6 +57,14 @@ var app = {
 			    $("#spaziodroid6").show();
 			    $("#spaziodroid7").show();
 			    $("#spaziodroid8").show();
+
+                $("#textTitle").attr("class", "visione2aDROID");
+			    $("#text").attr("class", "visioneDROID");
+			    $("#title").attr("class", "visione4DROID");
+			    $("#textCentral").attr("class", "visione3DROID");
+			    $("#titlev1").attr("class", "visione3DROID");
+			    $("#scegliIng").show();
+			    $("#digitalIng").show();
 
                 $("#sendapp").attr("class", "visione3aDROID");
 			    $("#scegli").attr("class", "visioneDROID0");
@@ -68,6 +80,7 @@ var app = {
 			    $("#emailV").attr("class", "visione2DROID");
 			    $("#webtext").attr("class", "visione2DROID");
 			    $("#webV").attr("class", "visione2DROID");
+				$("#webV").attr("class", "visione2DROID");
 				
 				initscroll()
 		}
@@ -82,6 +95,8 @@ var app = {
 			$("#titolo").attr("class", "visione4IPAD");
 			$("#titolov1").attr("class", "visione4IPAD");
 			$("#titolov2").attr("class", "visione4IPAD");
+            $("#continua").attr("class", "visioneIPAD");
+			$("#iper").attr("class", "visioneiperIPAD");
 			$("#copertina").attr("height", "100%");
 			$("#pallina").attr("width", "46px");
 			$("#ita").attr("width", "46px");
@@ -97,6 +112,7 @@ var app = {
 			$("#sendapp").attr("class", "visione3IPAD");
 			$("#scegli").attr("class", "visioneIPAD0");
 			$("#digital").attr("class", "visione3IPAD");
+			$("#digitalIng").attr("class", "visione3IPAD");
 			
 			$("#indirizzotext").attr("class", "visioneIPAD");
 			$("#indirizzoV").attr("class", "visione2IPAD");
@@ -108,6 +124,17 @@ var app = {
 			$("#emailV").attr("class", "visione2IPAD");
 			$("#webtext").attr("class", "visioneIPAD");
 			$("#webV").attr("class", "visione2IPAD");
+			$("#webV2").attr("class", "visione2IPAD");
+
+            $("#img1").attr("class", "visione3IPAD");
+			$("#img2").attr("class", "visione3IPAD");
+			$("#img3").attr("class", "visione3IPAD");
+			$("#img4").attr("class", "visione3IPAD");
+			$("#img5").attr("class", "visione3IPAD");
+			$("#img6").attr("class", "visione3IPAD");
+			$("#img7").attr("class", "visione3IPAD");
+			$("#img8").attr("class", "visione3IPAD");
+			$("#img9").attr("class", "visione3IPAD");
 
             $("#video").attr("width", "460px");
             $("#video2").attr("width", "460px");
@@ -371,6 +398,22 @@ function alertDismissed() {
 
 
 function initscroll() {
+
+    if (localStorage.getItem("Token").length < 5 || localStorage.getItem("Token") === null || typeof(localStorage.getItem("Token")) == 'undefined' || localStorage.getItem("Token")=="null") {
+		
+	setTimeout (function(){
+				
+			PushbotsPlugin.getToken(function(token){
+										
+					localStorage.setItem("Token", token);
+										
+					regToken()
+										
+			});
+				
+	}, 500);
+		
+	}
 	
 myScroll = new iScroll('wrapper', {
 				zoom: true,
@@ -771,14 +814,20 @@ function checkpush() {
 function regToken() {
 	var ciccio;
 	var conta = 1;
+
+    if (localStorage.getItem("Token").length < 5 || localStorage.getItem("Token") === null || typeof(localStorage.getItem("Token")) == 'undefined' || localStorage.getItem("Token")=="null") {
+		
+		return;
+	}
+	else{
 	
 	$(".spinner").show();
 	$.ajax({
 		   type:"GET",
-		   url:"http://interactivebusinessapp.it/device/set_token/PxgLiaL7dBgTYUzUyHZRNGIUlT5NIabyHrkZC57PHoJGiiAQZA/iiyWJvAGB2pvCv4jKCAsTlWlWzhmIlX1DwXn1y3CAt8dYcwIP7/"+ localStorage.getItem("Token") +"",
+		   url:"http://interactivebusinessapp.it/device/set_token/PxgLiaL7dBgTYUzUyHZRNGIUlT5NIabyHrkZC57PHoJGiiAQZA/IcM8vW0wEDKCm80ZnMdKUqmtFoUgSxQJgcBW2fbvUZ2w7h9ymt/"+ localStorage.getItem("Token") +"",
 		   //url:"http://interactivebusinessapp.it/device/set_token/{platform_code}/{company_code}/{device_token}",
 		   //Android PxgLiaL7dBgTYUzUyHZRNGIUlT5NIabyHrkZC57PHoJGiiAQZA
-		   //data: {token:localStorage.getItem("Token")}, iiyWJvAGB2pvCv4jKCAsTlWlWzhmIlX1DwXn1y3CAt8dYcwIP7
+		   //data: {token:localStorage.getItem("Token")}, IcM8vW0wEDKCm80ZnMdKUqmtFoUgSxQJgcBW2fbvUZ2w7h9ymt
 		   contentType: "application/json; charset=utf-8",
 		   json: 'callback',
 		   timeout: 7000,
@@ -802,6 +851,8 @@ function regToken() {
 		   
 		   },
 		   dataType:"json"});
+
+    }
 	   
 }
 
@@ -837,7 +888,10 @@ function vedi () {
 		//alert(screen.width);
 		
 		$("#testoTitolo3").attr("class", "visione2IPAD");
+		$("#textTitle3").attr("class", "visione2IPAD");
 		$("#testo3").attr("class", "visioneIPAD");
+		$("#text3").attr("class", "visioneIPAD");
+		$("#webV").attr("class", "visioneIPAD");
 	}
 	
 	var myScroll7;
@@ -886,12 +940,23 @@ function apriweb () {
 
 function aprimail () {
 
-window.plugin.email.open({
-	to:      '',
-	subject: 'Contatto',
-	body:    "La Digital Bisiness Card IBA di 'Travel Clinic' e' disponibile al link http://www.interactivebusinessapp.it/download/travel_clinic",
-	isHtml:  true
-});
+if(localStorage.getItem("Lingua")==2){
+		window.plugin.email.open({
+								 to:      "",
+								 subject: "",
+								 body:    "The Digital Business Card IBA 'Travel Clinic' is available at the link http://www.interactivebusinessapp.it/download/travel_clinic",
+								 isHtml:  true
+								 });
+	}
+	else{
+		window.plugin.email.open({
+								 to:      "",
+								 subject: "",
+								 body:    "La Digital Business Card IBA di 'Travel Clinic' e' disponibile al link http://www.interactivebusinessapp.it/download/travel_clinic",
+								 isHtml:  true
+								 });
+		
+	}
 
 
 }
@@ -929,7 +994,15 @@ function mandasms5 () {
 function mandasms () {
 	
 
-	window.plugins.socialsharing.shareViaSMS("La Digital Bisiness Card IBA di 'Travel Clinic' e' disponibile al link http://www.interactivebusinessapp.it/download/travel_clinic", "", function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
+if(localStorage.getItem("Lingua")==2){
+			window.plugins.socialsharing.shareViaSMS("The Digital Business Card IBA 'Travel Clinic' is available at the link http://www.interactivebusinessapp.it/download/travel_clinic", "", function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
+	}
+	else
+	{
+			window.plugins.socialsharing.shareViaSMS("La Digital Business Card IBA di 'Travel Clinic' e' disponibile al link http://www.interactivebusinessapp.it/download/travel_clinic", "", function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
+	
+	}
+
 }
 
 
@@ -941,7 +1014,7 @@ function aprimappa () {
 	
 	//var refff = window.open("http://www.google.com/maps?q=220, Via Zoe Fontana, Roma", '_system');
 	//"http://maps.google.com/maps?daddr=41.929622,12.608878&dirflg=r"
-	window.open("google.navigation:q=41.914732,12.449977&mode=d" , '_system');
+	window.open("google.navigation:q=41.914724,12.450170&mode=d" , '_system');
 	
 	refff.addEventListener('exit', function (event) {
 		
