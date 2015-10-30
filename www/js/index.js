@@ -128,6 +128,16 @@ var app = {
 			$("#webtext").attr("class", "visioneIPAD");
 			$("#webV").attr("class", "visione2IPAD");
 			$("#webV2").attr("class", "visione2IPAD");
+			
+			$("#textTitle").attr("class", "visione2aIPAD");
+			$("#textTitle3").attr("class", "visione2aIPAD");
+			$("#text").attr("class", "visioneIPAD");
+			$("#text3").attr("class", "visioneIPAD");
+			$("#title").attr("class", "visione4IPAD");
+			$("#textCentral").attr("class", "visione3aIPAD");
+			$("#titlev1").attr("class", "visione2aIPAD");
+			$("#schose").show();
+			$("#digitalIng").show();
 
             $("#img1").attr("class", "visione3IPAD");
 			$("#img2").attr("class", "visione3IPAD");
@@ -583,10 +593,10 @@ function provino() {
 				  //window.location.href = "#article4";
 				  
 				  if(isMobileScreenWidth2 < 768){
-				  contenuto = contenuto + "<tr title='"+ item.event_id +"'><td width='90%' align='center'><table width='100%' align='left' valign='center'><tr><td width='100%' align='left' colspan='2' valign='center'><div id='datepush' class='visione'>"+ item.activated_at +" - "+ item.expire_on +" </div></td></tr><tr><td width='100%' colspan='2' valign='center'><div id='titolopush' class='visione'>"+ item.title +"</div> </td></tr></table></td><td width='120' align='center' valign='center'><img id='noletto' src='img/notRead.png' width='42px'></td></tr><tr><td colspan='2'><hr></td></tr>"
+				  contenuto = contenuto + "<tr><td width='90%' align='center'>Nessuna Notifica</td></tr>"
 				  }
 				  else{
-					 contenuto = contenuto + "<tr title='"+ item.event_id +"'><td width='90%' align='center'><table width='100%' align='left' valign='center'><tr><td width='100%' align='left' colspan='2' valign='center'><div id='datepush' class='visioneIPAD'>"+ item.activated_at +" - "+ item.expire_on +" </div></td></tr><tr><td width='100%' colspan='2' valign='center'><div id='titolopush' class='visioneIPAD'>"+ item.title +"</div> </td></tr></table></td><td width='120' align='center' valign='center'><img id='noletto' src='img/notRead.png' width='80px'></td></tr><tr><td colspan='2'><hr></td></tr>"
+					 contenuto = contenuto + "<tr><td width='90%' align='center'>Nessuna Notifica</td></tr>"
 				  }
 
 				  
@@ -633,12 +643,14 @@ function provino() {
 		   error: function(){
 		   $(".spinner").hide();
 		   
-		   navigator.notification.alert(
+		   $("#contenuto").html("<tr><td width='90%' align='center'>Nessuna Notifica</td></tr>");
+		   
+		   /*navigator.notification.alert(
 										'Nessuna Connessione Internet, Riprova Tra Qualche Minuto',  // message
 										alertDismissed,         // callback
 										'Error',            // title
 										'OK'                  // buttonName
-										);
+										);*/
 		   
 		   
 		   },
@@ -767,8 +779,13 @@ function checkpush() {
 				  
 					if(item.is_read==false){
 					  $("#pushbutton").removeClass("pulsante3").addClass("pulsante3new");
-					  return;
+					  return false;
 					}
+					else
+					{
+					  $("#pushbutton").removeClass("pulsante3new").addClass("pulsante3");
+					}
+					
 				  }
 			});
 
@@ -783,12 +800,12 @@ function checkpush() {
 		   
 		   $(".spinner").hide();
 		
-		   navigator.notification.alert(
+		  /* navigator.notification.alert(
 										'Nessuna Connessione Internet nelle check push, Riprova Tra Qualche Minuto',  // message
 										alertDismissed,         // callback
 										'Error',            // title
 										'OK'                  // buttonName
-										);
+										);*/
 		   
 		   },
 		   dataType:"json"});
@@ -815,20 +832,24 @@ function regToken() {
 		   crossDomain: true,
 		   success:function(result){
 
-			checkpush()
+			setTimeout (function(){
+				checkpush()
+			}, 500);
 	 
 		   },
 		   error: function(){
 		   $(".spinner").hide();
 		   
-		   checkpush()
+		   setTimeout (function(){
+				checkpush()
+			}, 500);
 		   
-		   navigator.notification.alert(
+		   /*navigator.notification.alert(
 										'Nessuna Connessione Internet nel reg token, Riprova Tra Qualche Minuto',  // message
 										alertDismissed,         // callback
 										'Error',            // title
 										'OK'                  // buttonName
-										);
+										);*/
 		   
 		   },
 		   dataType:"json"});
@@ -956,6 +977,18 @@ function aprimail0 () {
 
 window.plugin.email.open({
 	to:      "info@cesmet.com",
+	subject: "info",
+	body:    "",
+	isHtml:  true
+});
+
+
+}
+
+function aprimail1 () {
+
+window.plugin.email.open({
+	to:      "infomedica@cesmet.com",
 	subject: "info",
 	body:    "",
 	isHtml:  true
